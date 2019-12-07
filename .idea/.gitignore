@@ -2,3 +2,4 @@
 /workspace.xml
 src/main/java/com/alok/grpc/stub/
 target/
+*.class
