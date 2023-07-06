@@ -1,3 +1,36 @@
-/src/main/java/com/alok/grpc/stub/UserGrpc.java
-/src/main/java/com/alok/grpc/stub/
-/target/
+ELP.md
+target/
+src/main/java/com/alok/grpc/stub/
+resources/data/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+!log/
+logs/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+*.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
