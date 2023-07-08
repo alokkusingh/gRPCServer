@@ -1,5 +1,6 @@
 package com.alok.grpc;
 
+import com.alok.grpc.impl.AbcDataService;
 import com.alok.grpc.impl.UserService;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
@@ -15,6 +16,7 @@ public class GrpcServer {
         Server server = ServerBuilder
                 .forPort(9090)
                 .addService(new UserService())
+                .addService(new AbcDataService())
                 .build();
 
         server.start();
