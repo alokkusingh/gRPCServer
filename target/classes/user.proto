@@ -3,7 +3,18 @@ syntax = "proto3";
 option java_package = "com.alok.grpc.stub";
 
 service User {
+    // Unary - tradition REST way
     rpc login(LoginRequest) returns (APIResponse);
+
+    // Streaming - Server
+    //rpc login(LoginRequest) returns (stream APIResponse);
+
+    // Streaming - Client
+    //rpc login(stream LoginRequest) returns (APIResponse);
+
+    // Streaming - Bi Directional
+    //rpc login(stream LoginRequest) returns (stream APIResponse);
+
     rpc logout(Empty) returns (APIResponse);
 }
 
