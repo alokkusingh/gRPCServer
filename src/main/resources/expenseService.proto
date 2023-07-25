@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option java_package = "com.alok.grpc.stub";
+
+service ExpenseService {
+  // Streaming - Server
+  rpc getAllExpenses(ExpenseRequest) returns (stream ExpenseEntry);
+}
+
+message ExpenseRequest {
+
+}
+
+//    private Long id;
+//    @Temporal(TemporalType.TIMESTAMP)
+//    private Date date;
+//    private String head;
+//    private Double amount;
+//    private String comment;
+//    private String category;
+//    private Integer monthx;
+//    private Integer yearx;
+message ExpenseEntry {
+  int64 id = 1;
+  string date = 2;
+  string head = 3;
+  double amount = 4;
+  string comment = 5;
+  string category = 6;
+  int32 monthx = 7;
+  int32 yearx = 8;
+}
+
+
+message Empty {
+}

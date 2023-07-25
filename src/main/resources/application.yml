@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    password: ''
+    url: jdbc:h2:~/test-v4
+    username: sa
+  debug: true
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+        id:
+          new_generator_mappings: true
+    show-sql: 'true '
+  sql:
+    init:
+      mode: always

@@ -5,7 +5,6 @@ import com.alok.grpc.stub.AbcDataServiceOuterClass;
 import com.alok.grpc.stub.AbcDataServiceOuterClass.AbcDataResponse;
 import com.alok.grpc.stub.AbcDataServiceOuterClass.AbcDataRequest;
 import io.grpc.stub.StreamObserver;
-
 import java.time.LocalDateTime;
 
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
@@ -30,6 +29,7 @@ public class AbcDataService extends AbcDataServiceGrpc.AbcDataServiceImplBase {
                     .setAbcData(AbcDataServiceOuterClass.AbcDataPayload.newBuilder()
                             .setX(LocalDateTime.now().toString())
                             .setY(String.valueOf(Math.random()))
+                            //.setZ(String.valueOf(i))
                             .build())
                     .build();
             responseObserver.onNext(response);
